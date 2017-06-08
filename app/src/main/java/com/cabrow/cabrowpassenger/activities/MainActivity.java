@@ -1,7 +1,9 @@
-package com.cabrow.cabrowpassenger;
+package com.cabrow.cabrowpassenger.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import com.cabrow.cabrowpassenger.R;
 
 public class MainActivity extends AppCompatActivity {
 
