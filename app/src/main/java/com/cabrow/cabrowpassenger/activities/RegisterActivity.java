@@ -63,24 +63,7 @@ public class RegisterActivity extends ActionBarBaseActivitiy {
 		}
 	}
 
-	public void registerGcmReceiver(BroadcastReceiver mHandleMessageReceiver) {
-		if (mHandleMessageReceiver != null) {
-			AndyUtils.showCustomProgressDialog(this,
-					getString(R.string.progress_loading), false, null);
-			new GCMRegisterHendler(RegisterActivity.this,
-					mHandleMessageReceiver);
 
-		}
-	}
-
-	public void unregisterGcmReceiver(BroadcastReceiver mHandleMessageReceiver) {
-		if (mHandleMessageReceiver != null) {
-
-			if (mHandleMessageReceiver != null) {
-				unregisterReceiver(mHandleMessageReceiver);
-			}
-		}
-	}
 
 	private void gotSignInFragment() {
 		UberSignInFragment signInFrag = new UberSignInFragment();

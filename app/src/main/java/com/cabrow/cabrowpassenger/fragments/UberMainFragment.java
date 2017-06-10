@@ -14,10 +14,13 @@ import android.widget.Toast;
 
 import com.android.volley.VolleyError;
 import com.cabrow.cabrowpassenger.R;
+import com.cabrow.cabrowpassenger.activities.MainActivity;
+import com.cabrow.cabrowpassenger.firebase.MyFirebaseInstanceIDService;
 import com.cabrow.cabrowpassenger.utils.AndyUtils;
 import com.cabrow.cabrowpassenger.utils.CommonUtilities;
 import com.cabrow.cabrowpassenger.utils.Const;
 import com.cabrow.cabrowpassenger.utils.PreferenceHelper;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 /**
  * @author Hardik A Bhalodi
@@ -26,7 +29,6 @@ public class UberMainFragment extends UberBaseFragmentRegister {
 
 	private ImageButton btnSignIn, btnRegister;
 	private PreferenceHelper pHelper;
-	private boolean isReceiverRegister;
 	private int oldOptions;
 
 	// private Animation topToBottomAnimation, bottomToTopAnimation;
@@ -37,7 +39,6 @@ public class UberMainFragment extends UberBaseFragmentRegister {
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		isReceiverRegister = false;
 		pHelper = new PreferenceHelper(activity);
 		// oldOptions = activity.getWindow().getDecorView()
 		// .getSystemUiVisibility();
@@ -79,8 +80,9 @@ public class UberMainFragment extends UberBaseFragmentRegister {
 		// TODO Auto-generated method stub
 		super.onActivityCreated(savedInstanceState);
 		if (TextUtils.isEmpty(pHelper.getDeviceToken())) {
-			isReceiverRegister = true;
-			activity.registerGcmReceiver(mHandleMessageReceiver);
+			Intent intent = new Intent(getActivity(), MyFirebaseInstanceIDService.class);
+			getActivity().startService(intent);
+			return;
 		}
 		// topToBottomAnimation = AnimationUtils.loadAnimation(activity,
 		// R.anim.top_bottom);
@@ -135,41 +137,6 @@ public class UberMainFragment extends UberBaseFragmentRegister {
 		activity.addFragment(regFrag, false, Const.FRAGMENT_REGISTER);
 	}
 
-	@Override
-	public void onDestroy() {
-		// TODO Auto-generated method stub
-		if (isReceiverRegister) {
-			activity.unregisterGcmReceiver(mHandleMessageReceiver);
-			isReceiverRegister = false;
-		}
-		super.onDestroy();
-	}
-
-	private BroadcastReceiver mHandleMessageReceiver = new BroadcastReceiver() {
-
-		@Override
-		public void onReceive(Context context, Intent intent) {
-			AndyUtils.removeCustomProgressDialog();
-			if (intent.getAction().equals(CommonUtilities.DISPLAY_REGISTER_GCM)) {
-				Bundle bundle = intent.getExtras();
-				if (bundle != null) {
-
-					int resultCode = bundle.getInt(CommonUtilities.RESULT);
-					if (resultCode == Activity.RESULT_OK) {
-
-					} else {
-						Toast.makeText(
-								activity,
-								getResources().getString(
-										R.string.register_gcm_failed),
-								Toast.LENGTH_SHORT).show();
-						activity.finish();
-					}
-
-				}
-			}
-		}
-	};
 
 	@Override
 	public void onErrorResponse(VolleyError error) {
