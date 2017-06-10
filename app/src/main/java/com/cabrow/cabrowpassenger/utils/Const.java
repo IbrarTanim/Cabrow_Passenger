@@ -10,7 +10,7 @@ public class Const {
 	// "AIzaSyAKe3XmUV93WvHJvII4Qzpf0R052mxb0KI";
 
 	// temp key
-	public static final String PLACES_AUTOCOMPLETE_API_KEY = "AIzaSyCzIi7s9wVDD8JR5SFoibZCP7zH6ADJHPU";
+	public static final String PLACES_AUTOCOMPLETE_API_KEY = "AIzaSyCqAAEzP_kzq0V8uIZakk1e5CblfWKe2VY";
 	//public static final String PLACES_AUTOCOMPLETE_API_KEY = "AIzaSyDLQZQAARIyVD75Cd3Ri-DX93nHoWPhFxI";
 	/*public static final String PLACES_AUTOCOMPLETE_API_KEY = "AIzaSyBw1eFvLreaSn06cUfD0Gj4uYVa9RG8gH8"; new */
 
