@@ -31,7 +31,8 @@ public final class CommonUtilities {
 	/**
 	 * Google API project id registered to use GCM.
 	 */
-	public static final String SENDER_ID = "470787885801";
+//	public static final String SENDER_ID = "470787885801";
+	public static final String SENDER_ID = "883270961725";
 	/*public static final String SENDER_ID = "524806189130"; new */
 
 	/**
@@ -42,8 +43,8 @@ public final class CommonUtilities {
 	/**
 	 * Intent used to display a message in the screen.
 	 */
-	public static final String DISPLAY_MESSAGE_ACTION = "com.uberorg.DISPLAY_MESSAGE";
-	public static final String DISPLAY_REGISTER_GCM = "com.uberorg.REGISTER_GCM";
+	public static final String DISPLAY_MESSAGE_ACTION = "com.cabrow.cabrowpassenger.DISPLAY_MESSAGE";
+	public static final String DISPLAY_REGISTER_GCM = "com.cabrow.cabrowpassenger.REGISTER_GCM";
 
 	/**
 	 * Intent's extra that contains the message to be displayed.

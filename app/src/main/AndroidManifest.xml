@@ -14,7 +14,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-    <uses-permission android:name="com.automated.taxinow.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.cabrow.cabrowpassenger.permission.C2D_MESSAGE" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -97,18 +97,19 @@
             android:name="io.card.payment.DataEntryActivity"
             android:screenOrientation="portrait" />
 
-        <!--<receiver
+      <receiver
             android:name="com.google.android.gcm.GCMBroadcastReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
-                <category android:name="com.automated.taxinow" />
+                <category android:name="com.cabrow.cabrowpassenger" />
             </intent-filter>
         </receiver>
 
-        <service android:name=".GCMIntentService" />-->
+        <service android:name="com.cabrow.cabrowpassenger.utils.GCMIntentService"
+            android:enabled="true"/>
 
         <activity
             android:name=".activities.UberMyThingActivity"

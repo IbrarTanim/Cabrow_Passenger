@@ -68,8 +68,8 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	public void registerGcmReceiver(BroadcastReceiver mHandleMessageReceiver) {
 		if (mHandleMessageReceiver != null) {
-			AndyUtils.showCustomProgressDialog(this,
-					getString(R.string.progress_loading), false, null);
+	/*		AndyUtils.showCustomProgressDialog(this,
+					getString(R.string.progress_loading), false, null);*/
 			new GCMRegisterHendler(this, mHandleMessageReceiver);
 
 		}

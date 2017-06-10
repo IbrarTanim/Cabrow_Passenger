@@ -35,6 +35,7 @@ public class GCMRegisterHendler {
 			if (TextUtils.isEmpty(regId)) {
 				// Automatically registers application on startup.
 				GCMRegistrar.register(activity, CommonUtilities.SENDER_ID);
+				AndyUtils.removeSimpleProgressDialog();
 			} else {
 				AppLog.Log(Const.TAG, "Already Device registered: regId = "
 						+ regId);

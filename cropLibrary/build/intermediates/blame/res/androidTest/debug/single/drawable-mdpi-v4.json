@@ -8,7 +8,19 @@
         "source": "F:\\abc\\Cabrow_Passenger\\cropLibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\crop__divider.9.png"
     },
     {
+        "merged": "E:\\Reaz\\personal\\CabrowPassen\\Cabrow_Passenger\\cropLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\crop__divider.9.png",
+        "source": "E:\\Reaz\\personal\\CabrowPassen\\Cabrow_Passenger\\cropLibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\crop__divider.9.png"
+    },
+    {
         "merged": "F:\\abc\\Cabrow_Passenger\\cropLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\crop__ic_done.png",
         "source": "F:\\abc\\Cabrow_Passenger\\cropLibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\crop__ic_done.png"
+    },
+    {
+        "merged": "E:\\Reaz\\personal\\CabrowPassen\\Cabrow_Passenger\\cropLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\crop__ic_done.png",
+        "source": "E:\\Reaz\\personal\\CabrowPassen\\Cabrow_Passenger\\cropLibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\crop__ic_done.png"
+    },
+    {
+        "merged": "E:\\Reaz\\personal\\CabrowPassen\\Cabrow_Passenger\\cropLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\crop__ic_cancel.png",
+        "source": "E:\\Reaz\\personal\\CabrowPassen\\Cabrow_Passenger\\cropLibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\crop__ic_cancel.png"
     }
 ]

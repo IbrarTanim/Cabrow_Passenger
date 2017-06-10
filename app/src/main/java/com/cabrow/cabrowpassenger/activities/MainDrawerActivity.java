@@ -468,9 +468,9 @@ public class MainDrawerActivity extends ActionBarBaseActivitiy {
 			Bundle bundle = new Bundle();
 			bundle.putParcelable(Const.DRIVER, driver);
 
-			//Rokan
-			//feedBack.setArguments(bundle);
-			//addFragmentWithStateLoss(feedBack, false, Const.FRAGMENT_FEEDBACK);
+
+			 feedBack.setArguments(bundle);
+			 addFragmentWithStateLoss(feedBack, false, Const.FRAGMENT_FEEDBACK);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

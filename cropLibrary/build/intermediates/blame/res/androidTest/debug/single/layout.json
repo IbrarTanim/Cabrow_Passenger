@@ -1,7 +1,15 @@
 [
     {
+        "merged": "E:\\Reaz\\personal\\CabrowPassen\\Cabrow_Passenger\\cropLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\crop__activity_crop.xml",
+        "source": "E:\\Reaz\\personal\\CabrowPassen\\Cabrow_Passenger\\cropLibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\crop__activity_crop.xml"
+    },
+    {
         "merged": "F:\\abc\\Cabrow_Passenger\\cropLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\crop__activity_crop.xml",
         "source": "F:\\abc\\Cabrow_Passenger\\cropLibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\crop__activity_crop.xml"
+    },
+    {
+        "merged": "E:\\Reaz\\personal\\CabrowPassen\\Cabrow_Passenger\\cropLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\crop__layout_done_cancel.xml",
+        "source": "E:\\Reaz\\personal\\CabrowPassen\\Cabrow_Passenger\\cropLibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\crop__layout_done_cancel.xml"
     },
     {
         "merged": "F:\\abc\\Cabrow_Passenger\\cropLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\crop__layout_done_cancel.xml",
