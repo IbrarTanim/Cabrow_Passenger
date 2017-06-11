@@ -76,6 +76,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.Projection;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -105,7 +106,7 @@ import java.util.TimerTask;
 
 public class UberMapFragment extends UberBaseFragment implements
 		OnProgressCancelListener, OnSeekBarChangeListener, OnItemClickListener,
-		LocationHelper.OnLocationReceived {
+		LocationHelper.OnLocationReceived, OnMapReadyCallback {
 
 	private PlacesAutoCompleteAdapter adapter;
 	private AutoCompleteTextView etSource;
@@ -309,8 +310,8 @@ public class UberMapFragment extends UberBaseFragment implements
 
 		mMapView = (MapView) view.findViewById(R.id.map);
 		mMapView.onCreate(mBundle);
-		
-		
+        mMapView.getMapAsync(this);
+
 		mapMarker=new ArrayList<Marker>();
 		spchBtn.setOnClickListener(new OnClickListener() {
 			@Override
@@ -424,7 +425,7 @@ public class UberMapFragment extends UberBaseFragment implements
 		// });
 		listType = new ArrayList<VehicalType>();
 		//Rokan
-		//typeAdapter = new VehicalTypeListAdapter(activity, listType, this);
+		typeAdapter = new VehicalTypeListAdapter(activity, listType, this);
 		listViewType.setAdapter(typeAdapter);
 		getVehicalTypes();
 		// drawer.lock();
@@ -488,6 +489,23 @@ public class UberMapFragment extends UberBaseFragment implements
 				Const.ServiceCode.APPLY_REFFRAL_CODE, this, this));
 
 	}
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        map = googleMap;
+        if( map == null){
+            //map.setMyLocationEnabled(false);
+            map.getUiSettings().setMyLocationButtonEnabled(false);
+            map.getUiSettings().setZoomControlsEnabled(false);
+            map.setOnMyLocationChangeListener(new GoogleMap.OnMyLocationChangeListener() {
+                @Override
+                public void onMyLocationChange(Location location) {
+
+                }
+            });
+        }
+    }
+
 
 	//Rokan
 	/*private void setUpMapIfNeeded() {
@@ -1348,7 +1366,9 @@ public class UberMapFragment extends UberBaseFragment implements
 		}
 	}
 
-	private class TimerRequestStatus extends TimerTask {
+
+
+    private class TimerRequestStatus extends TimerTask {
 		@Override
 		public void run() {
 			if (isContinueRequest) {

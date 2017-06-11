@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Pro CabRow Client</string>
+    <string name="app_name">CabRow Passenger</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="text_fname">FIRST NAME</string>
@@ -285,7 +285,7 @@
     <string name="error_valid_password">Password should at least 6 characters long</string>
     <string name="error_mismatch_password">Your new password and confirm new password do not match</string>
     <string name="error_empty_rating">Please give rating to driver.</string>
-    
+
     <!-- speech strings -->
     <string name="speech_prompt">Say something&#58; &#34;who is the nearest driver&#34;</string>
     <string name="speech_not_supported">Sorry! Your device doesn\'t support speech input</string>
