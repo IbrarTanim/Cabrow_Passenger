@@ -28,7 +28,8 @@ public class Const {
 	// web services
 	public class ServiceType {
 		//private static final String HOST_URL = "http://booktaxi.ie/";
-		private static final String HOST_URL = "http://cabrow.com/public/";
+		//private static final String HOST_URL = "http://cabrow.com/public/";
+		private static final String HOST_URL = "http://cabrow.com/";
 		//private static final String HOST_URL = "http://taxi.jayzay.com/";
 		
 
